@@ -7,9 +7,69 @@
         mc:Ignorable="d"
         WindowStyle="SingleBorderWindow"
         WindowState="Maximized"
-        d:DesignHeight="1200" d:DesignWidth="1600"
+        Loaded="Window_Loaded"
+        d:DesignHeight="1000" d:DesignWidth="1600"
         Title="Heroes">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Background="LawnGreen" Margin="20" CornerRadius="20">
+            <TextBlock Text="P   L   A   Y   E   R   S" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="DemiBold"/>
+        </Border>
+
+        <Border x:Name="Player1" Grid.Column="0" Grid.Row="1" Background="LightGreen" Margin="20,10,10,10" CornerRadius="10">
+            <StackPanel Margin="10">
+                <TextBlock Text="{Binding Imie}" HorizontalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5"/>
+                
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="Player2" Grid.Column="1" Grid.Row="1" Background="LightGreen" Margin="10" CornerRadius="10">
+            <StackPanel Margin="10">
+                <TextBlock Text="{Binding Imie}" HorizontalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5"/>
+
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="Player3" Grid.Column="2" Grid.Row="1" Background="LightGreen" Margin="10" CornerRadius="10">
+            <StackPanel Margin="10">
+                <TextBlock Text="{Binding Imie}" HorizontalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5"/>
+
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="Player4" Grid.Column="3" Grid.Row="1" Background="LightGreen" Margin="10" CornerRadius="10">
+            <StackPanel Margin="10">
+                <TextBlock Text="{Binding Imie}" HorizontalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5"/>
+
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="Player5" Grid.Column="4" Grid.Row="1" Background="LightGreen" Margin="10,10,20,10" CornerRadius="10">
+            <StackPanel Margin="10">
+                <TextBlock Text="{Binding Imie}" HorizontalAlignment="Center" FontSize="14" FontWeight="DemiBold" Margin="5"/>
+
+            </StackPanel>
+        </Border>
+
+        <Menu Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="3" Height="40" Margin="20, 10">
+            <MenuItem Header="Tura:  " Margin="10" FontSize="14"/>
+            <MenuItem Header="{Binding Tura}" FontSize="14"/>
+            <MenuItem Header=" | " Margin="10" FontSize="14"/>
+            <MenuItem Header="{Binding DzienTygodniaTxt}" Margin="10" FontSize="14"/>
+        </Menu>
 
     </Grid>
 </Window>
